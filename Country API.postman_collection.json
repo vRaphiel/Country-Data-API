@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "39680044-9ca3-44c6-bb3e-d6ea7faec2b6",
+		"name": "Country API",
+		"description": "Postman to Countries API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10015730"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "GetCountries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/countries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCountry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Afganistan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/countries",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCountry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Perukistan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/countries/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"countries",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/countries/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"countries",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
